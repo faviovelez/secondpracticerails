@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   get 'pags/pag1'
 
   get 'pags/pag2'
+  
 end
