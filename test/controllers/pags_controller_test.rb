@@ -11,4 +11,10 @@ class PagsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "should get pag3" do
+    get :pag3
+    assert_response :success
+  end
+
+
 end

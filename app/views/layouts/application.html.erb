@@ -2,10 +2,11 @@
 <html>
 <head>
   <title>Secondpractice</title>
-  <%= stylesheet_link_tag    'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', media: 'all', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', media: 'all', 'data-turbolinks-track' => false %>
+  <%= stylesheet_link_tag    'slate.min', media: 'all', 'data-turbolinks-track' => false %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => false %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
+  <%= javascript_include_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', 'data-turbolinks-track' => false %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -27,6 +28,7 @@
         <ul class="nav navbar-nav">
           <li><%=link_to 'Página 1', pags_pag1_path %></li>
           <li><%=link_to 'Página 2', pags_pag2_path %></li>
+          <li><%=link_to 'Página 3', pags_pag3_path %></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
         </ul>
@@ -34,7 +36,13 @@
     </div><!-- /.container-fluid -->
   </nav>
 
-<%= yield %>
+<div class="container">
+  <%= yield %>
+  <p>
+    <%= iterate_users %>
+  </p>
+</div>
+
 
 </body>
 </html>
