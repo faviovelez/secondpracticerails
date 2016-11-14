@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Página 2</title>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => false %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => false %>
+    <%= javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js', 'data-turbolinks-track' => false %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
-
     <%= csrf_meta_tags %>
   </head>
 
@@ -31,6 +31,7 @@
             <li><%=link_to 'Página 3', pags_pag3_path %></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
+            <li class="btn1"><a href="#">Backstretch</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
